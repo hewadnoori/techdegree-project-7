@@ -1,0 +1,43 @@
+header {
+    background-color: rgb(146, 122, 212);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+header h2 {
+    font-size: large;
+    padding: 15px;
+}
+
+header h1,
+header h2 {
+    font-weight: 100;
+}
+
+header img {
+    border-radius: 50%;
+    width: 15%;
+    padding-left: 15px;
+
+}
+
+.bell {
+    fill: white;
+    width: 30px;
+    display: block;
+    border-right: 1px solid rgb(161, 160, 160);
+    padding-right: 15px;
+}
+
+header div:nth-child(2) {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+}
