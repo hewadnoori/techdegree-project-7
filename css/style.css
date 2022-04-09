@@ -1,5 +1,5 @@
 header {
-    background-color: rgb(146, 122, 212);
+    background-color: rgb(122, 138, 212);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,17 +27,37 @@ header img {
 
 }
 
+header div:nth-child(2) {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav {
+    background-color: rgb(42, 45, 70);
+    width: 100%;
+}
+
+.nav-links {
+    fill: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home,
+.bar-chart,
+.members,
+.settings {
+    width: 10%;
+    padding: 20px;
+}
+
 .bell {
     fill: white;
     width: 30px;
     display: block;
     border-right: 1px solid rgb(161, 160, 160);
     padding-right: 15px;
-}
-
-header div:nth-child(2) {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: flex-end;
 }
