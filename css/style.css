@@ -134,6 +134,56 @@ nav {
     justify-self: end;
 }
 
+.border {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.mobile-title {
+    margin-bottom: 0;
+}
+
+.social {
+    display: grid;
+    width: 90%;
+    background-color: rgba(156, 139, 158, 0.137);
+    border: 2px solid rgba(156, 139, 158, 0.404);
+    border-radius: 10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+        'icon social'
+        'icon number';
+}
+
+.icon-background {
+    display: grid;
+    width: 70%;
+    height: 70%;
+    background-color: rgb(122, 138, 212);
+    border-radius: 50%;
+    align-items: center;
+    justify-items: center;
+    grid-area: icon;
+    justify-self: center;
+    align-self: center;
+}
+
+.social svg {
+    fill: white;
+    width: 50%;
+
+}
+
+.social h3 {
+    color: rgb(122, 138, 212);
+}
+
+.social p {
+    font-size: 50px;
+    margin: 0;
+}
+
 /* --------------------------
     Keyframes
   --------------------------- */

@@ -78,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const myChart3 = new Chart(doughnut, {
         type: 'doughnut',
         data: {
-            labels: ['Red', 'Blue', 'Yellow'],
+            labels: ['Purple', 'Blue', 'Red'],
             datasets: [{
                 label: '# of Votes',
-                data: [3, 3, 12],
+                data: [12, 3, 3],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(122, 138, 212, 1)',
                     'rgba(54, 162, 235, 1)',
-                    'rgb(122, 138, 212, 1)',
+                    'rgb(255, 99, 132, 1)',
                 ],
 
             }]
@@ -99,8 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             scales: {
                 y: {
-                    beginAtZero: true
-                }
+                    display: false,
+                    beginAtZero: true,
+                },
+
             }
         }
     });
