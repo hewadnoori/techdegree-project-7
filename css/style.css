@@ -143,17 +143,29 @@ nav {
     margin-bottom: 0;
 }
 
+.social-section {
+    display: grid;
+    justify-items: center;
+}
+
+.title {
+    width: 90%;
+    font-weight: 100;
+}
+
 .social {
     display: grid;
     width: 90%;
     background-color: rgba(156, 139, 158, 0.137);
     border: 2px solid rgba(156, 139, 158, 0.404);
+    color: rgb(141, 136, 141);
     border-radius: 10px;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 40px 70px;
     grid-template-areas:
         'icon social'
         'icon number';
+    margin-bottom: 15px;
 }
 
 .icon-background {
@@ -177,11 +189,13 @@ nav {
 
 .social h3 {
     color: rgb(122, 138, 212);
+    padding-left: 5px;
 }
 
 .social p {
     font-size: 50px;
     margin: 0;
+
 }
 
 /* --------------------------
