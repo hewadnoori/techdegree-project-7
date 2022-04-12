@@ -33,7 +33,7 @@ header h2 {
 }
 
 header img {
-    width: 70%;
+    width: 40px;
     padding-left: 10px;
 
 }
@@ -55,15 +55,12 @@ nav {
 }
 
 .bell {
-    border-right: 1px solid rgb(141, 140, 140);
-}
-
-.bell {
     fill: white;
-    width: 45%;
+    width: 25px;
     display: block;
     justify-self: end;
     padding-right: 10px;
+    border-right: 1px solid rgb(171, 175, 173);
 }
 
 .nav-links {
@@ -142,6 +139,40 @@ nav {
     border-bottom: 1px solid rgb(179, 179, 179);
 }
 
+.charts {
+    display: grid;
+    justify-content: center;
+}
+
+.border canvas {
+    width: 90vw;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio {
+    margin-bottom: 30px;
+}
+
+.radio-label {
+    padding: 8px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background .1s;
+}
+
+.radio-input:checked+.radio-label {
+    background-color: rgb(79, 161, 90);
+    color: white;
+}
+
+.radio input {
+    width: auto;
+}
+
+
 .mobile-title {
     margin-bottom: 0;
 }
@@ -174,8 +205,8 @@ nav {
 
 .icon-background {
     display: grid;
-    width: 70%;
-    height: 70%;
+    width: 80px;
+    height: 80px;
     background-color: rgb(122, 138, 212);
     border-radius: 50%;
     align-items: center;
@@ -207,7 +238,7 @@ nav {
 }
 
 .social-widget {
-
+    width: 90vw;
     display: grid;
     justify-items: center;
 
@@ -216,7 +247,7 @@ nav {
 .social-widget div {
     display: grid;
     justify-items: center;
-    width: 90%;
+    width: 100%;
     padding: 0;
     text-align: center;
 }
@@ -253,8 +284,8 @@ nav {
     justify-items: center;
 }
 
-.message-user {
-    width: 90%;
+.width {
+    width: 90vw;
 }
 
 input,
@@ -356,6 +387,89 @@ input:checked+.slider {
     border-radius: 50%;
 }
 
+#timezone {
+    margin: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(156, 139, 158, 0.137);
+    border: 2px solid rgba(156, 139, 158, 0.404);
+    color: rgb(156, 139, 158)
+}
+
+option {
+    color: black;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+    grid-gap: 15px;
+}
+
+.save,
+.cancel {
+
+    padding: 15px 0 15px 0;
+    color: white;
+    border: none;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.save {
+    background-color: rgb(122, 138, 212);
+}
+
+.cancel {
+    background-color: rgb(134, 136, 143)
+}
+
+.settings-section {
+    display: grid;
+    justify-items: center;
+
+}
+
+.set {
+    display: grid;
+    justify-items: stretch;
+    grid-template-areas:
+        "setting1 button1"
+        "setting2 button2";
+    grid-template-rows: 60px 50px;
+
+}
+
+.set p:nth-of-type(1) {
+    grid-area: setting1;
+    font-size: 13px;
+    align-self: center;
+    margin: 0;
+}
+
+.set p:nth-of-type(2) {
+    grid-area: setting2;
+    font-size: 12px;
+    align-self: center;
+    margin: 0;
+}
+
+.switch:nth-of-type(1) {
+    grid-area: button1;
+    color: red;
+    justify-self: end;
+    align-self: center;
+}
+
+.switch:nth-of-type(2) {
+    grid-area: button2;
+    justify-self: end;
+    align-self: center;
+}
+
+
 
 /* --------------------------
     Keyframes
@@ -386,3 +500,8 @@ input:checked+.slider {
 /* --------------------------
     Media queries
   --------------------------- */
+@media screen and (min-width: 768px) {
+    header {
+        grid-template-columns: 10fr 1fr 1fr 2fr;
+    }
+}

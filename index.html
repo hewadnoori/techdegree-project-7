@@ -11,7 +11,6 @@
 </head>
 <body>
     <header>
-        
             <h1><b>Web</b>App&trade;</h1>
     
             <svg class="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.033 122.88">
@@ -76,17 +75,31 @@
             </div>
         </div>
         <div>
-            <h3 class="title">TRAFFIC</h3>
-            <div class="border">
-                <canvas id="myLineChart"></canvas>
-            </div> 
-            <h3 class="title">DAILY TRAFFIC</h3>
-            <div class="border">
-                <canvas id="myBarChart"></canvas>
-            </div>
-            <h3 class="mobile-title title">MOBILE USERS</h3>
-            <div class="border">
-                <canvas id="myDoughnutChart"></canvas>
+            <div class="charts">
+                <div class="width ">
+                    <h3 class="title">TRAFFIC</h3>
+                    <div class="radio">
+                        <input class="radio-input" type="radio" name="time" id="hourly" value="hourly" checked>
+                        <label class="radio-label" for="hourly">Hourly</label>
+                        <input class="radio-input" type="radio" name="time" id="daily" value="daily">
+                        <label class="radio-label" for="daily">Daily</label>
+                        <input class="radio-input" type="radio" name="time" id="weekly" value="weekly">
+                        <label class="radio-label" for="weekly">Weekly</label>
+                        <input class="radio-input" type="radio" name="time" id="monthly" value="monthly">
+                        <label class="radio-label" for="monthly">Monthly</label>
+                    </div>
+                    <div class="border">
+                        <canvas id="myLineChart"></canvas>
+                    </div> 
+                    <h3 class="title">DAILY TRAFFIC</h3>
+                    <div class="border">
+                        <canvas id="myBarChart"></canvas>
+                    </div>
+                    <h3 class="mobile-title title">MOBILE USERS</h3>
+                    <div class="border">
+                        <canvas id="myDoughnutChart"></canvas>
+                    </div>
+                </div>
             </div>
             
             <div class="social-section border">
@@ -122,8 +135,8 @@
                 </div>       
             </div>
             <div class=" center border">
+                <h3 class="title new-members">NEW MEMBERS</h3>
                 <div class="social-widget">
-                    <h3 class="title new-members">NEW MEMBERS</h3>
                     <div class="border">
                         <img src="images/member-1.jpg" alt="Victoria Chambers">
                         <p>Victoria Chambers</p>
@@ -174,29 +187,78 @@
             </div>     
             <div class="border message-section">
                 <h3 class="title">MESSAGE USER</h3>
-                <form action="" class="message-user">
+                <form action="" class="message-user width">
                     <input type="search" name="search-bar" id="search-bar" placeholder="Search for User">
                     <textarea name="message" id="message" placeholder="Message for User" cols="30" rows="10"></textarea>
-                    <input type="submit" name="send" id="send" value="send">
+                    <input type="submit" name="send" id="send" value="SEND">
                 </form>
             </div>    
-                
-            <div>
-                <h3 class="title">SETTINGS</h3>
-                <p>Send Email Notifications</p>
-                <label class="switch">
-                    <input type="checkbox" id="email" checked>
-                    <span class="slider rounded email-on">ON</span>
-                </label>
-                <p>Set Profile to Public</p>
-                <label class="switch">
-                    <input type="checkbox" id="profile" checked>
-                    <span class="slider rounded profile-on">ON</span>
-                </label>    
-            </div>    
-            
-
-        </div>  
+            <div class="settings-section">
+                <div class="width">
+                    <h3 class="title">SETTINGS</h3>
+                    <div class="set">
+                        <p>Send Email Notifications</p>
+                        <label class="switch">
+                            <input type="checkbox" id="email" checked>
+                            <span class="slider rounded email-on">ON</span>
+                        </label>
+                        <p>Set Profile to Public</p>
+                        <label class="switch">
+                            <input type="checkbox" id="profile" checked>
+                            <span class="slider rounded profile-on">ON</span>
+                        </label>    
+                    </div>    
+                    <select name="timezone_offset" id="timezone" class="span5">
+                        <option value="" disabled selected>Select Timezone</option>
+                        <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                        <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                        <option value="-10:00">(GMT -10:00) Hawaii</option>
+                        <option value="-09:50">(GMT -9:30) Taiohae</option>
+                        <option value="-09:00">(GMT -9:00) Alaska</option>
+                        <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                        <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                        <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                        <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                        <option value="-04:50">(GMT -4:30) Caracas</option>
+                        <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                        <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                        <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                        <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                        <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                        <option value="+00:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                        <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                        <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                        <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                        <option value="+03:50">(GMT +3:30) Tehran</option>
+                        <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                        <option value="+04:50">(GMT +4:30) Kabul</option>
+                        <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                        <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                        <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                        <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                        <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                        <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                        <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                        <option value="+08:75">(GMT +8:45) Eucla</option>
+                        <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                        <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                        <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                        <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                        <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                        <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                        <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                        <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                        <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                        <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+                    </select>
+                    <div class="buttons">
+                        <button class="save">SAVE</button>
+                        <button class= 'cancel'>CANCEL</button>
+                    </div>
+                    
+                </div>
+            </div>  
+        </div> 
     </main>
     
     

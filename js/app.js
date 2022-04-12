@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const myChart3 = new Chart(doughnut, {
         type: 'doughnut',
         data: {
-            labels: ['Purple', 'Blue', 'Red'],
+            labels: ['Desktop', 'Tablet', 'Phones'],
             datasets: [{
                 label: '# of Votes',
                 data: [12, 3, 3],
