@@ -171,11 +171,30 @@
                         <p class="date">1 day ago</p>
                     </div>
                 </div>    
-            </div>
+            </div>     
+            <div class="border message-section">
+                <h3 class="title">MESSAGE USER</h3>
+                <form action="" class="message-user">
+                    <input type="search" name="search-bar" id="search-bar" placeholder="Search for User">
+                    <textarea name="message" id="message" placeholder="Message for User" cols="30" rows="10"></textarea>
+                    <input type="submit" name="send" id="send" value="send">
+                </form>
+            </div>    
                 
-                
-            <h3 class="title">MESSAGE USER</h3>
-            <h3 class="title">SETTINGS</h3>
+            <div>
+                <h3 class="title">SETTINGS</h3>
+                <p>Send Email Notifications</p>
+                <label class="switch">
+                    <input type="checkbox" id="email" checked>
+                    <span class="slider rounded email-on">ON</span>
+                </label>
+                <p>Set Profile to Public</p>
+                <label class="switch">
+                    <input type="checkbox" id="profile" checked>
+                    <span class="slider rounded profile-on">ON</span>
+                </label>    
+            </div>    
+            
 
         </div>  
     </main>

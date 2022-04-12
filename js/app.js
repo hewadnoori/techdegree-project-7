@@ -1,6 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     const alerty = document.querySelector(".alert");
-    console.log(alerty);
+    const form = document.querySelector('.message-user');
+    const input = document.querySelector('#message');
+    const onOff = document.querySelector('#email');
+    const onOff2 = document.querySelector('#profile')
+    const users = ['victoria chambers', 'dale byrd', 'dawn wood', 'dan oliver']
+    onOff.addEventListener('change', (e) => {
+        let text = document.querySelector(".email-on");
+        console.log(text);
+        if (text.textContent === "ON") {
+            text.textContent = "OFF";
+            console.log(text);
+        }
+        else if (text.textContent === "OFF") {
+            text.textContent = "ON";
+            console.log(text);
+        }
+
+    })
+    onOff2.addEventListener('change', (e) => {
+        let text = document.querySelector(".profile-on");
+        console.log(text);
+        if (text.textContent === "ON") {
+            text.textContent = "OFF";
+            console.log(text);
+        }
+        else if (text.textContent === "OFF") {
+            text.textContent = "ON";
+            console.log(text);
+        }
+
+    })
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const search = form.querySelector('#search-bar').value;
+        const message = form.querySelector('#message').value;
+        if (users.includes(search.toLowerCase()) & message != "") {
+            alert('Your message was sent!');
+        }
+        else if (message === "" || users.includes(search.toLowerCase()) === false) {
+            alert('The message field is empty and/or we couldn\'t find that user!')
+        }
+    })
 
     alerty.addEventListener('click', (e) => {
         const close = e.target.textContent;
@@ -106,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
 
 
 

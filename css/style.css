@@ -247,6 +247,116 @@ nav {
     margin-bottom: 0;
 }
 
+.message-section,
+.message-user {
+    display: grid;
+    justify-items: center;
+}
+
+.message-user {
+    width: 90%;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: rgba(156, 139, 158, 0.137);
+    border: 2px solid rgba(156, 139, 158, 0.404);
+    border-radius: 5PX;
+}
+
+input[type="search"]::placeholder,
+textarea::placeholder {
+    color: rgba(156, 139, 158, 0.804);
+    padding: 10px;
+}
+
+textarea {
+    padding: 0;
+}
+
+input[type="search"] {
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    width: 101%;
+    background-color: rgb(122, 138, 212);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    border: none;
+    font-size: small;
+    font-weight: lighter;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(122, 138, 212);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 2px solid rgba(190, 182, 190, 0.804);
+    color: white;
+    text-align: start;
+    padding: 8px;
+    padding-left: 60px;
+}
+
+.slider:before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .5s;
+    border: 2px solid rgba(159, 151, 160, 0.804);
+
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(64px);
+    -ms-transform: translateX(64px);
+    transform: translateX(64px);
+}
+
+input:checked+.slider {
+    padding: 8px;
+}
+
+.slider.rounded {
+    border-radius: 34px;
+}
+
+.slider.rounded:before {
+    border-radius: 50%;
+}
+
+
 /* --------------------------
     Keyframes
   --------------------------- */
