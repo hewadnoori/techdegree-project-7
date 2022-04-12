@@ -10,6 +10,10 @@ header {
     color: white;
 }
 
+img {
+    border-radius: 50%;
+}
+
 header h1 {
     font-size: 20px;
     justify-self: start;
@@ -29,7 +33,6 @@ header h2 {
 }
 
 header img {
-    border-radius: 50%;
     width: 70%;
     padding-left: 10px;
 
@@ -195,7 +198,47 @@ nav {
 .social p {
     font-size: 50px;
     margin: 0;
+}
 
+.center {
+    display: grid;
+    justify-items: center;
+}
+
+.social-widget {
+
+    display: grid;
+    justify-items: center;
+
+}
+
+.social-widget div {
+    display: grid;
+    justify-items: center;
+    width: 90%;
+    padding: 0;
+    text-align: center;
+}
+
+.social-widget div img {
+    width: 25%;
+
+}
+
+.social-widget p {
+    margin: 0;
+}
+
+.email {
+    color: rgb(157, 164, 197);
+}
+
+.date {
+    padding-bottom: 15px;
+}
+
+.last-social .date {
+    padding-bottom: 6px;
 }
 
 /* --------------------------
