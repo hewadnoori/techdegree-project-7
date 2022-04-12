@@ -153,7 +153,8 @@ nav {
 
 .title {
     width: 90%;
-    font-weight: 100;
+
+    font-size: small;
 }
 
 .social {
@@ -222,7 +223,7 @@ nav {
 
 .social-widget div img {
     width: 25%;
-
+    padding-top: 15px;
 }
 
 .social-widget p {
@@ -239,6 +240,11 @@ nav {
 
 .last-social .date {
     padding-bottom: 6px;
+}
+
+.new-members,
+.recent-activity {
+    margin-bottom: 0;
 }
 
 /* --------------------------
