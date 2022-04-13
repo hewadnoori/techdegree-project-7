@@ -569,7 +569,7 @@ option {
     .three-charts {
         display: grid;
         grid-template-columns: 44vw 44vw;
-        grid-template-rows: 350px 250px;
+        grid-template-rows: 45vw 30vw;
         grid-template-areas:
             'linechart linechart'
             'barchart doughnutchart';
@@ -583,9 +583,7 @@ option {
     }
 
     .linechart {
-
-        width: 680px;
-
+        width: 87vw;
     }
 
     .barchart {
@@ -594,7 +592,7 @@ option {
     }
 
     .bar {
-        width: 340px;
+        width: 44vw;
         margin-top: 30px;
     }
 
@@ -611,7 +609,7 @@ option {
     }
 
     .doughnut {
-        width: 300px;
+        width: 35vw;
         padding-left: 60px;
     }
 
@@ -652,6 +650,12 @@ option {
 
     .social {
         width: 92%;
+    }
+
+    .new-members,
+    .recent-activity,
+    .message-section .title {
+        width: 96%;
     }
 
     .social p {
@@ -702,6 +706,7 @@ option {
             'image comment';
         grid-template-columns: 10vw 80vw;
         grid-template-rows: 8vh;
+        justify-items: start;
         width: 98%;
     }
 
@@ -734,5 +739,133 @@ option {
     .switch:nth-of-type(1),
     .switch:nth-of-type(2) {
         justify-self: start;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .doughnut {
+        width: 34vw;
+    }
+
+    .center {
+        padding-bottom: 0;
+    }
+
+    .social-widget {
+        grid-template-columns: 45vw 41vw;
+        grid-template-rows: 50vh;
+        grid-template-areas:
+            'new recent';
+        grid-column-gap: 11px;
+    }
+
+    .social-widget .title {
+        text-align: start;
+    }
+
+    .new-members {
+        padding-left: 10px;
+    }
+
+    .new-mem {
+        grid-area: new;
+    }
+
+    .social-widget .newMem {
+        width: 43vw;
+        grid-template-columns: 7vw 27vw 9vw;
+    }
+
+    .social-widget .newMem img {
+        width: 60px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .social-widget .newMem .date {
+        justify-self: end;
+    }
+
+    .social-widget .newMem div p {
+        font-size: 12px;
+    }
+
+    .social-widget .newMem:nth-of-type(4) {
+        border: none;
+    }
+
+    .new-mem .title {
+        width: 43vw;
+    }
+
+    .recent-act {
+        grid-area: recent;
+    }
+
+    .social-widget .recent {
+        width: 43vw;
+        grid-template-columns: 10vw 33vw;
+        grid-template-rows: 11vh;
+    }
+
+    .recent-activity {
+        margin: 8px;
+    }
+
+    .social-widget .recent img {
+        width: 60px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .social-widget .recent div p {
+        font-size: 12px;
+    }
+
+    .social-widget .recent:after {
+        content: '';
+    }
+
+    .new-mem {
+        border-right: 1px solid rgb(179, 179, 179);
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: 46vw 46vw;
+    }
+
+    .message-section {
+        border-right: 1px solid rgb(179, 179, 179);
+    }
+
+    .message-section .title {
+        width: 43vw;
+        justify-self: center;
+        margin: 0;
+    }
+
+    .message-user {
+        width: 43vw;
+
+    }
+
+    .settings-section .width {
+        width: 43vw;
+    }
+
+    .set {
+        grid-template-columns: 200px auto;
+
+    }
+
+    #timezone {
+        width: 43vw;
+        margin-top: 40px;
+    }
+
+    .save,
+    .cancel {
+        margin-bottom: 14px;
     }
 }
