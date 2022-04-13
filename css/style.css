@@ -569,7 +569,7 @@ option {
     .three-charts {
         display: grid;
         grid-template-columns: 44vw 44vw;
-        grid-template-rows: 400px 400px;
+        grid-template-rows: 400px 250px;
         grid-template-areas:
             'linechart linechart'
             'barchart doughnutchart';
@@ -577,25 +577,35 @@ option {
 
     .linechart {
         grid-area: linechart;
-
     }
 
     .barchart {
         grid-area: barchart;
-        border-right: 1px solid red;
+        border-right: 1px solid rgb(179, 179, 179);
+    }
+
+    .barchart canvas {
+        padding: 10px;
     }
 
     .doughnutchart {
         grid-area: doughnutchart;
     }
 
-    #myBarChart {
-        width: 100px;
-        height: 100px;
+    .doughnutchart h3 {
+        padding-left: 15px;
     }
 
-    .doughnutchart canvas {
-        width: 20%;
+    .doughnut {
+        width: 80%;
+        padding-left: 60px;
+    }
+
+    .doughnut canvas {
+        padding-bottom: 20px;
+        position: relative;
+        bottom: 25px;
+
     }
 
 
