@@ -569,14 +569,23 @@ option {
     .three-charts {
         display: grid;
         grid-template-columns: 44vw 44vw;
-        grid-template-rows: 400px 250px;
+        grid-template-rows: 350px 250px;
         grid-template-areas:
             'linechart linechart'
             'barchart doughnutchart';
     }
 
+    .three-charts .border:nth-of-type(1) {
+        width: 88vw;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
     .linechart {
-        grid-area: linechart;
+
+        width: 680px;
+
     }
 
     .barchart {
@@ -584,8 +593,13 @@ option {
         border-right: 1px solid rgb(179, 179, 179);
     }
 
+    .bar {
+        width: 340px;
+        margin-top: 30px;
+    }
+
     .barchart canvas {
-        padding: 10px;
+        padding: 0px 10px 10px 0;
     }
 
     .doughnutchart {
@@ -597,7 +611,7 @@ option {
     }
 
     .doughnut {
-        width: 80%;
+        width: 300px;
         padding-left: 60px;
     }
 
@@ -605,8 +619,120 @@ option {
         padding-bottom: 20px;
         position: relative;
         bottom: 25px;
+    }
+
+    .social-section {
+        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-rows: 40px 130px;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+            'title title title'
+            'facebook insta twitter';
+    }
+
+    .social-title {
+        grid-area: title;
+        justify-self: start;
+        padding-left: 15px;
+    }
+
+    .social-section .social:nth-of-type(1) {
+        grid-area: facebook;
 
     }
 
+    .social-section .social:nth-of-type(2) {
+        grid-area: insta;
+    }
 
+    .social-section .social:nth-of-type(3) {
+        grid-area: twitter;
+    }
+
+    .social {
+        width: 92%;
+    }
+
+    .social p {
+        font-size: 40px;
+    }
+
+    .icon-background {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+    }
+
+    .social-widget .newMem {
+        grid-template-columns: 10vw 70vw 10vw;
+        grid-template-areas: 'image nameEmail date';
+        grid-template-rows: 11vh;
+        width: 98%;
+        justify-items: start;
+    }
+
+    .social-widget .newMem img,
+    .social-widget .recent img {
+        grid-area: image;
+        width: 75px;
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .social-widget .newMem div {
+        grid-area: nameEmail;
+        display: grid;
+        justify-items: start;
+        padding-left: 20px;
+    }
+
+    .social-widget .newMem div p:nth-of-type(1) {
+        align-self: flex-end;
+    }
+
+    .newMem .date {
+        grid-area: date;
+        align-self: center;
+        padding-top: 20px;
+    }
+
+    .social-widget .recent {
+        grid-template-areas:
+            'image comment';
+        grid-template-columns: 10vw 80vw;
+        grid-template-rows: 8vh;
+        width: 98%;
+    }
+
+
+    .social-widget .recent div {
+        grid-area: comment;
+        display: grid;
+        justify-items: start;
+        padding-left: 20px;
+
+    }
+
+    .social-widget .recent div p:nth-of-type(1) {
+        align-self: flex-end;
+        padding-top: 20px;
+    }
+
+    .social-widget .recent:after {
+        content: '>';
+        position: relative;
+        left: 82vw;
+        bottom: 50px;
+        font-size: 20px;
+    }
+
+    .set {
+        grid-template-columns: 25vw 55vw;
+    }
+
+    .switch:nth-of-type(1),
+    .switch:nth-of-type(2) {
+        justify-self: start;
+    }
 }
