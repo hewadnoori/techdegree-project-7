@@ -501,7 +501,102 @@ option {
     Media queries
   --------------------------- */
 @media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        grid-template-areas:
+            'header header'
+            'nav main';
+    }
+
     header {
         grid-template-columns: 10fr 1fr 1fr 2fr;
+        grid-area: header;
     }
+
+    main {
+        grid-area: main;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    .nav-links {
+        grid-template-columns: 1fr;
+
+    }
+
+    .nav-links svg {
+        width: 50%;
+        padding: 20px;
+        justify-self: center;
+    }
+
+    .home {
+        justify-self: start;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr 5fr;
+    }
+
+    .alert {
+        margin: 15px;
+    }
+
+    .width {
+        width: 87vw;
+    }
+
+    .traffic {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        grid-template-rows: 70px;
+    }
+
+    .title {
+        align-self: center;
+    }
+
+    .radio {
+
+        justify-self: end;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    .three-charts {
+        display: grid;
+        grid-template-columns: 44vw 44vw;
+        grid-template-rows: 400px 400px;
+        grid-template-areas:
+            'linechart linechart'
+            'barchart doughnutchart';
+    }
+
+    .linechart {
+        grid-area: linechart;
+
+    }
+
+    .barchart {
+        grid-area: barchart;
+        border-right: 1px solid red;
+    }
+
+    .doughnutchart {
+        grid-area: doughnutchart;
+    }
+
+    #myBarChart {
+        width: 100px;
+        height: 100px;
+    }
+
+    .doughnutchart canvas {
+        width: 20%;
+    }
+
+
 }

@@ -147,9 +147,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-
-
-
-
-
 })

@@ -77,27 +77,33 @@
         <div>
             <div class="charts">
                 <div class="width ">
-                    <h3 class="title">TRAFFIC</h3>
-                    <div class="radio">
-                        <input class="radio-input" type="radio" name="time" id="hourly" value="hourly" checked>
-                        <label class="radio-label" for="hourly">Hourly</label>
-                        <input class="radio-input" type="radio" name="time" id="daily" value="daily">
-                        <label class="radio-label" for="daily">Daily</label>
-                        <input class="radio-input" type="radio" name="time" id="weekly" value="weekly">
-                        <label class="radio-label" for="weekly">Weekly</label>
-                        <input class="radio-input" type="radio" name="time" id="monthly" value="monthly">
-                        <label class="radio-label" for="monthly">Monthly</label>
+                    <div class="traffic">
+                        <h3 class="title">TRAFFIC</h3>
+                        <div class="radio">
+                            <input class="radio-input" type="radio" name="time" id="hourly" value="hourly" checked>
+                            <label class="radio-label" for="hourly">Hourly</label>
+                            <input class="radio-input" type="radio" name="time" id="daily" value="daily">
+                            <label class="radio-label" for="daily">Daily</label>
+                            <input class="radio-input" type="radio" name="time" id="weekly" value="weekly">
+                            <label class="radio-label" for="weekly">Weekly</label>
+                            <input class="radio-input" type="radio" name="time" id="monthly" value="monthly">
+                            <label class="radio-label" for="monthly">Monthly</label>
+                        </div>
                     </div>
-                    <div class="border">
-                        <canvas id="myLineChart"></canvas>
-                    </div> 
-                    <h3 class="title">DAILY TRAFFIC</h3>
-                    <div class="border">
-                        <canvas id="myBarChart"></canvas>
-                    </div>
-                    <h3 class="mobile-title title">MOBILE USERS</h3>
-                    <div class="border">
-                        <canvas id="myDoughnutChart"></canvas>
+                    <div class="three-charts">
+                        <div class="border linechart">
+                            <canvas id="myLineChart"></canvas>
+                        </div> 
+                        
+                        <div class="border barchart">
+                            <h3 class="title">DAILY TRAFFIC</h3>
+                            <canvas id="myBarChart"></canvas>
+                        </div>
+                        
+                        <div class="border doughnutchart">
+                            <h3 class="mobile-title title">MOBILE USERS</h3>
+                            <canvas id="myDoughnutChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,8 +266,7 @@
             </div>  
         </div> 
     </main>
-    
-    
+      
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
