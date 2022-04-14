@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const onOff = document.querySelector('#email');
     const onOff2 = document.querySelector('#profile')
     const users = ['victoria chambers', 'dale byrd', 'dawn wood', 'dan oliver']
+    const loggedIn = document.querySelector('.logged-in');
+
+
     onOff.addEventListener('change', (e) => {
         let text = document.querySelector(".email-on");
         console.log(text);
@@ -38,8 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (users.includes(search.toLowerCase()) & message != "") {
             alert('Your message was sent!');
         }
-        else if (message === "" || users.includes(search.toLowerCase()) === false) {
-            alert('The message field is empty and/or we couldn\'t find that user!')
+        else if (message === "" & users.includes(search.toLowerCase()) === false) {
+            alert('The message field is empty and we couldn\'t find that user!')
+        }
+        else if (message === "") {
+            alert('The message field is empty')
+        }
+        else if (users.includes(search.toLowerCase()) === false) {
+            alert('Sorry, we couldn\'t find that user!')
         }
     })
 
@@ -47,8 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const close = e.target.textContent;
         if (close === "x") {
             alerty.className = 'hidden';
+
         }
     });
+    document.addEventListener('click', () => {
+        if (alerty.className === "hidden") {
+            loggedIn.style.display = "none"
+        }
+        else if (alerty.className === "alert") {
+            loggedIn.style.display = "block"
+        }
+    })
     let line = document.getElementById('myLineChart').getContext('2d');
     let massPopChart = new Chart(line, {
         type: 'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
